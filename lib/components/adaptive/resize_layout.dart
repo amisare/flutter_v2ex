@@ -1,7 +1,7 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_adaptive_scaffold/flutter_adaptive_scaffold.dart';
-import 'package:flutter_v2ex/pages/t/:topicId.dart';
+import 'package:flutter_v2ex/pages/t/topicId.dart';
 import 'package:flutter_v2ex/utils/storage.dart';
 import 'package:get/get.dart';
 
@@ -56,7 +56,8 @@ class _ResizeLayoutState extends State<ResizeLayout> {
               width: isiPadHorizontal ? lfWidth + _offset : maxWidth,
               child: SafeArea(
                 top: Breakpoints.mediumAndUp.isActive(context) ? true : false,
-                bottom: Breakpoints.mediumAndUp.isActive(context) ? true : false,
+                bottom:
+                    Breakpoints.mediumAndUp.isActive(context) ? true : false,
                 child: widget.leftLayout,
               ),
             ),
@@ -64,11 +65,13 @@ class _ResizeLayoutState extends State<ResizeLayout> {
               // 横屏状态可拖拽
               SizedBox(
                 width: dividerWidth,
-                child: isiPadHorizontal ? DragDivider(
-                  onSize: (double delta) => setState(() {
-                    _offset = _offset += delta;
-                  }),
-                ) : null,
+                child: isiPadHorizontal
+                    ? DragDivider(
+                        onSize: (double delta) => setState(() {
+                          _offset = _offset += delta;
+                        }),
+                      )
+                    : null,
               ),
               SizedBox(
                 width: rgWidth - _offset,

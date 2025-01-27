@@ -1,7 +1,7 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_v2ex/models/web/item_tab_topic.dart';
-import 'package:flutter_v2ex/pages/t/:topicId.dart';
+import 'package:flutter_v2ex/pages/t/topicId.dart';
 import 'package:flutter_adaptive_scaffold/flutter_adaptive_scaffold.dart';
 import 'package:flutter_v2ex/utils/event_bus.dart';
 import 'package:flutter_v2ex/utils/global.dart';
@@ -29,8 +29,7 @@ class _SecondBodyState extends State<SecondBody> {
 
   @override
   Widget build(BuildContext context) {
-    return
-      DynamicColorBuilder(
+    return DynamicColorBuilder(
       builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
         ColorScheme? lightColorScheme;
         ColorScheme? darkColorScheme;
@@ -48,8 +47,7 @@ class _SecondBodyState extends State<SecondBody> {
             brightness: Brightness.dark,
           );
         }
-        return
-          MaterialApp(
+        return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               fontFamily: 'NotoSansSC',
@@ -63,10 +61,9 @@ class _SecondBodyState extends State<SecondBody> {
               useMaterial3: true,
               colorScheme: darkColorScheme,
             ),
-
             home: Scaffold(
               backgroundColor: Colors.transparent,
-              body:  SafeArea(
+              body: SafeArea(
                 child: Container(
                   margin: const EdgeInsets.only(right: 10, top: 10),
                   clipBehavior: Clip.hardEdge,
@@ -76,18 +73,19 @@ class _SecondBodyState extends State<SecondBody> {
                     // color: Theme.of(context).colorScheme.surfaceVariant.withOpacity(0.5),
                   ),
                   child: Center(
-                    child: topic != null ? TopicDetail(topicDetail: topic) : Text('VVEX', style: TextStyle(
-                      fontSize: 40,
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.primary
-                    )),
+                    child: topic != null
+                        ? TopicDetail(topicDetail: topic)
+                        : Text('VVEX',
+                            style: TextStyle(
+                                fontSize: 40,
+                                letterSpacing: 2,
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).colorScheme.primary)),
                     // child: topic != null ? Text(topic!.topicTitle) : const Text('VVEX'),
                   ),
                 ),
               ),
-            )
-        );
+            ));
       },
     );
   }

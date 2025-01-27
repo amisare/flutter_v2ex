@@ -10,11 +10,11 @@ import 'package:flutter_v2ex/pages/page_webView.dart';
 import 'package:flutter_v2ex/pages/page_login.dart';
 import 'package:flutter_v2ex/pages/page_setting.dart';
 
-import 'package:flutter_v2ex/pages/t/:topicId.dart';
-import 'package:flutter_v2ex/pages/go/:nodeId.dart';
-import 'package:flutter_v2ex/pages/member/:memberId.dart';
-import 'package:flutter_v2ex/pages/member/:memberId/topics.dart';
-import 'package:flutter_v2ex/pages/member/:memberId/replies.dart';
+import 'package:flutter_v2ex/pages/t/topicId.dart';
+import 'package:flutter_v2ex/pages/go/nodeId.dart';
+import 'package:flutter_v2ex/pages/member/memberId.dart';
+import 'package:flutter_v2ex/pages/member/memberId/topics.dart';
+import 'package:flutter_v2ex/pages/member/memberId/replies.dart';
 
 import 'package:flutter_v2ex/pages/my/topics.dart';
 import 'package:flutter_v2ex/pages/my/follow.dart';
